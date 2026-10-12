@@ -10,13 +10,649 @@
 
   <title>Odd Theory AI</title>
 
+  <style>
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+    body {
+
+      font-family: Arial, sans-serif;
+
+      background: #101318;
+
+      color: #f5f7fb;
+
+      min-height: 100vh;
+
+    }
+
+    header {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      padding: 22px 6%;
+
+      border-bottom: 1px solid #292e38;
+
+    }
+
+    .logo {
+
+      font-size: 20px;
+
+      font-weight: bold;
+
+      letter-spacing: 1px;
+
+    }
+
+    .logo span {
+
+      color: #91d5ff;
+
+    }
+
+    .status {
+
+      color: #a9b5c5;
+
+      font-size: 12px;
+
+    }
+
+    main {
+
+      max-width: 1100px;
+
+      margin: auto;
+
+      padding: 45px 6%;
+
+    }
+
+    .welcome {
+
+      margin-bottom: 32px;
+
+    }
+
+    .welcome small {
+
+      color: #91d5ff;
+
+      letter-spacing: 2px;
+
+      font-weight: bold;
+
+    }
+
+    h1 {
+
+      font-size: clamp(28px, 6vw, 44px);
+
+      margin: 14px 0;
+
+    }
+
+    .welcome p {
+
+      color: #a9b2c1;
+
+      line-height: 1.7;
+
+      max-width: 520px;
+
+    }
+
+    .hero {
+
+      background: linear-gradient(120deg, #202c3a, #17202a);
+
+      border: 1px solid #354455;
+
+      border-radius: 20px;
+
+      padding: 30px;
+
+      margin-bottom: 35px;
+
+    }
+
+    .hero h2 {
+
+      font-size: 24px;
+
+      margin-bottom: 12px;
+
+    }
+
+    .hero p {
+
+      color: #bdc8d6;
+
+      line-height: 1.6;
+
+      margin-bottom: 22px;
+
+    }
+
+    button {
+
+      border: none;
+
+      border-radius: 10px;
+
+      padding: 13px 18px;
+
+      font-size: 14px;
+
+      font-weight: bold;
+
+      cursor: pointer;
+
+      background: #a7ddff;
+
+      color: #101820;
+
+    }
+
+    button:hover {
+
+      background: #d0edff;
+
+    }
+
+    .section-title {
+
+      margin-bottom: 18px;
+
+      font-size: 20px;
+
+    }
+
+    .cards {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+
+      gap: 16px;
+
+    }
+
+    .card {
+
+      background: #191e26;
+
+      border: 1px solid #2d3440;
+
+      border-radius: 16px;
+
+      padding: 22px;
+
+    }
+
+    .card .emoji {
+
+      font-size: 28px;
+
+      margin-bottom: 16px;
+
+    }
+
+    .card h3 {
+
+      margin-bottom: 9px;
+
+      font-size: 17px;
+
+    }
+
+    .card p {
+
+      color: #a9b2c1;
+
+      font-size: 14px;
+
+      line-height: 1.6;
+
+      margin-bottom: 20px;
+
+    }
+
+    .card button {
+
+      background: #2b3948;
+
+      color: #d9efff;
+
+      width: 100%;
+
+    }
+
+    .card button:hover {
+
+      background: #394d60;
+
+    }
+
+    .panel {
+
+      display: none;
+
+      margin-top: 28px;
+
+      padding: 24px;
+
+      background: #191e26;
+
+      border: 1px solid #354455;
+
+      border-radius: 16px;
+
+    }
+
+    .panel.active {
+
+      display: block;
+
+    }
+
+    .panel h2 {
+
+      margin-bottom: 12px;
+
+    }
+
+    .panel p {
+
+      color: #b9c4d2;
+
+      line-height: 1.7;
+
+      margin-bottom: 16px;
+
+    }
+
+    input, select, textarea {
+
+      width: 100%;
+
+      padding: 13px;
+
+      margin: 8px 0 16px;
+
+      border-radius: 9px;
+
+      border: 1px solid #394454;
+
+      background: #101318;
+
+      color: white;
+
+      font: inherit;
+
+    }
+
+    label {
+
+      font-size: 14px;
+
+      color: #dce5ef;
+
+    }
+
+    footer {
+
+      text-align: center;
+
+      color: #7f8a99;
+
+      padding: 30px 15px;
+
+      font-size: 12px;
+
+    }
+
+    @media (max-width: 500px) {
+
+      header {
+
+        padding: 18px 5%;
+
+      }
+
+      main {
+
+        padding: 32px 5%;
+
+      }
+
+      .hero {
+
+        padding: 22px;
+
+      }
+
+    }
+
+  </style>
+
 </head>
 
 <body>
 
-  <h1>ODD THEORY AI</h1>
+  <header>
 
-  <p>Your personal AI video studio.</p>
+    <div class="logo">ODD THEORY <span>AI</span></div>
+
+    <div class="status">YOUR VIDEO STUDIO</div>
+
+  </header>
+
+  <main>
+
+    <section class="welcome">
+
+      <small>YOUR CREATIVE WORKSPACE</small>
+
+      <h1>Welcome to Odd Theory AI.</h1>
+
+      <p>
+
+        Turn curious questions about the human body into
+
+        fascinating science videos. Create, review, and
+
+        prepare your next YouTube upload in one place.
+
+      </p>
+
+    </section>
+
+    <section class="hero">
+
+      <h2>🎬 Create your next video</h2>
+
+      <p>
+
+        What happens inside your body when you eat,
+
+        drink, sleep, or experience something unusual?
+
+        Let's turn that question into a video idea.
+
+      </p>
+
+      <button onclick="showPanel('create')">
+
+        + Create a video
+
+      </button>
+
+    </section>
+
+    <h2 class="section-title">Your workspace</h2>
+
+    <section class="cards">
+
+      <article class="card">
+
+        <div class="emoji">🧠</div>
+
+        <h3>Topic Ideas</h3>
+
+        <p>Collect fascinating questions about the human body and everyday science.</p>
+
+        <button onclick="showPanel('ideas')">Explore ideas</button>
+
+      </article>
+
+      <article class="card">
+
+        <div class="emoji">🎥</div>
+
+        <h3>Create Video</h3>
+
+        <p>Start planning a Short or a longer science explainer.</p>
+
+        <button onclick="showPanel('create')">Start creating</button>
+
+      </article>
+
+      <article class="card">
+
+        <div class="emoji">👀</div>
+
+        <h3>Review Queue</h3>
+
+        <p>Keep track of videos you want to check before publishing.</p>
+
+        <button onclick="showPanel('review')">Open reviews</button>
+
+      </article>
+
+    </section>
+
+    <section id="create" class="panel">
+
+      <h2>🎥 Plan a video</h2>
+
+      <p>Choose a format and enter the question you want your video to answer.</p>
+
+      <form id="videoForm">
+
+        <label for="topic">Video topic</label>
+
+        <input id="topic" required placeholder="e.g. What happens when you drink water?">
+
+        <label for="format">Video format</label>
+
+        <select id="format">
+
+          <option value="Short">YouTube Short</option>
+
+          <option value="Long video">Long video</option>
+
+        </select>
+
+        <label for="style">Visual style</label>
+
+        <select id="style">
+
+          <option>Animated 3D medical visuals</option>
+
+          <option>Cinematic science animation</option>
+
+          <option>Simple educational animation</option>
+
+        </select>
+
+        <button type="submit">Add to review queue</button>
+
+      </form>
+
+    </section>
+
+    <section id="ideas" class="panel">
+
+      <h2>🧠 Topic ideas</h2>
+
+      <p>Here are some topics to start your Odd Theory collection:</p>
+
+      <ul style="padding-left: 22px; line-height: 2.1; color: #d5e2ef;">
+
+        <li>What happens inside your body when you drink water?</li>
+
+        <li>What happens when you skip a night's sleep?</li>
+
+        <li>How does your stomach digest a meal?</li>
+
+        <li>What happens inside your body when you get scared?</li>
+
+        <li>How does your brain process a dream?</li>
+
+        <li>What happens when you eat something spicy?</li>
+
+      </ul>
+
+      <button onclick="showPanel('create')" style="margin-top: 18px;">Turn an idea into a video</button>
+
+    </section>
+
+    <section id="review" class="panel">
+
+      <h2>👀 Your review queue</h2>
+
+      <p>Videos you add will appear here. You can review your ideas before any publishing step.</p>
+
+      <div id="queue">
+
+        <p>No videos planned yet. Start by creating one!</p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    ODD THEORY AI · Your curiosity, turned into science.
+
+    <br><br>
+
+    Planning dashboard preview · AI generation and YouTube publishing are not connected yet.
+
+  </footer>
+
+  <script>
+
+    function showPanel(panelId) {
+
+      document.querySelectorAll(".panel").forEach(function(panel) {
+
+        panel.classList.remove("active");
+
+      });
+
+      document.getElementById(panelId).classList.add("active");
+
+      document.getElementById(panelId).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+      });
+
+    }
+
+    var videoPlans = [];
+
+    document.getElementById("videoForm").addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      var topic = document.getElementById("topic").value.trim();
+
+      var format = document.getElementById("format").value;
+
+      var style = document.getElementById("style").value;
+
+      if (!topic) return;
+
+      videoPlans.push({
+
+        topic: topic,
+
+        format: format,
+
+        style: style
+
+      });
+
+      renderQueue();
+
+      this.reset();
+
+      showPanel("review");
+
+    });
+
+    function renderQueue() {
+
+      var queue = document.getElementById("queue");
+
+      queue.innerHTML = "";
+
+      if (videoPlans.length === 0) {
+
+        queue.innerHTML = "<p>No videos planned yet. Start by creating one!</p>";
+
+        return;
+
+      }
+
+      videoPlans.forEach(function(video, index) {
+
+        var item = document.createElement("div");
+
+        item.className = "card";
+
+        item.style.marginTop = "14px";
+
+        var title = document.createElement("h3");
+
+        title.textContent = video.topic;
+
+        var details = document.createElement("p");
+
+        details.textContent = video.format + " · " + video.style;
+
+        var status = document.createElement("p");
+
+        status.textContent = "Status: Waiting for your review";
+
+        var removeButton = document.createElement("button");
+
+        removeButton.textContent = "Remove from queue";
+
+        removeButton.onclick = function() {
+
+          videoPlans.splice(index, 1);
+
+          renderQueue();
+
+        };
+
+        item.appendChild(title);
+
+        item.appendChild(details);
+
+        item.appendChild(status);
+
+        item.appendChild(removeButton);
+
+        queue.appendChild(item);
+
+      });
+
+    }
+
+  </script>
 
 </body>
 
